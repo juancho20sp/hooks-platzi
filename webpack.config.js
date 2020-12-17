@@ -17,6 +17,9 @@ module.exports = {
 
     //   Nombre del archivo resultante
     filename: 'bundle.js',
+
+    // Para que reaccione a las rutas del react-router-dom
+    publicPath: '/',
   },
 
   //   Extensiones que utilizamos
@@ -73,6 +76,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
+    historyApiFallback: true,
     port: 3000,
   },
 };

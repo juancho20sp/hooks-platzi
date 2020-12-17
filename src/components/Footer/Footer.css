@@ -1,0 +1,10 @@
+.footer {
+    /* background-color: rosybrown; */
+    font-size: 1.2rem;
+
+    margin: 0 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
