@@ -12,25 +12,36 @@ import {
   NotFound,
 } from '../../containers';
 import { Layout } from '../../components';
+import { useInitialState } from '../../hooks';
+import { AppContext } from '../../context';
 
 const App = () => {
+  // Traemos el estado global
+  const initialState = useInitialState();
+
   return (
-    <BrowserRouter>
-      <Layout>
-        <Switch>
-          <Route exact path={Routes.home.path} component={Home}></Route>
-          <Route exact path={Routes.checkout.path} component={Checkout}></Route>
-          <Route
-            exact
-            path={Routes.information.path}
-            component={Information}
-          ></Route>
-          <Route exact path={Routes.payment.path} component={Payment}></Route>
-          <Route exact path={Routes.success.path} component={Success}></Route>
-          <Route component={NotFound}></Route>
-        </Switch>
-      </Layout>
-    </BrowserRouter>
+    <AppContext.Provider value={initialState}>
+      <BrowserRouter>
+        <Layout>
+          <Switch>
+            <Route exact path={Routes.home.path} component={Home}></Route>
+            <Route
+              exact
+              path={Routes.checkout.path}
+              component={Checkout}
+            ></Route>
+            <Route
+              exact
+              path={Routes.information.path}
+              component={Information}
+            ></Route>
+            <Route exact path={Routes.payment.path} component={Payment}></Route>
+            <Route exact path={Routes.success.path} component={Success}></Route>
+            <Route component={NotFound}></Route>
+          </Switch>
+        </Layout>
+      </BrowserRouter>
+    </AppContext.Provider>
   );
 };
 
