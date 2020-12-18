@@ -21,7 +21,7 @@ const Routes = {
   },
   success: {
     id: 4,
-    path: '/checkout/success',
+    path: '/checkout/sucess',
     name: 'success',
   },
 };
