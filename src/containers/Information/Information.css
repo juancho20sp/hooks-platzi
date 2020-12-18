@@ -1,0 +1,64 @@
+.information {
+    /* background-color: red; */
+
+    font-size: 1.2rem;
+
+    display: grid;
+    grid-template: 1fr / 1fr 30%;
+}
+
+.information-content {
+    /* background-color: red; */
+    margin: 0 10px;
+}
+
+.information-head {}
+
+.information-form {
+    /* background-color: royalblue; */
+
+}
+
+.information-form form {
+    display: grid;
+}
+
+.information-form form input {
+    background-color: transparent;
+    border-radius: 5px;
+
+    margin: 5px 0;
+    padding-left: 10px;
+
+    font-size: 1.1rem;
+
+    height: 2.2rem;
+}
+
+.information-buttons {
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.information-sidebar {}
+
+.information-item {}
+
+.information-element {
+    /* background-color: rosybrown; */
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+.information-element h4 {
+    border-bottom: 2px solid black;
+
+    margin-top: 10px;
+
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
