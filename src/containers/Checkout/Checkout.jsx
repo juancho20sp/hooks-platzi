@@ -1,6 +1,9 @@
 import React from 'react';
 import './Checkout.css';
 
+import { Link } from 'react-router-dom';
+import Routes from '../../routes/routes';
+
 const Checkout = () => {
   return (
     <div className="checkout">
@@ -13,13 +16,17 @@ const Checkout = () => {
             <span>$10</span>
           </div>
 
-          <button type="button">Eliminar</button>
+          <button type="button">
+            <i className="fas fa-trash-alt"></i>
+          </button>
         </div>
       </div>
 
       <div className="checkout-sidebar">
         <h3>Valor total: $10</h3>
-        <button type="button">Continuar pedido</button>
+        <Link to={Routes.information.path}>
+          <button type="button">Continuar pedido</button>
+        </Link>
       </div>
     </div>
   );

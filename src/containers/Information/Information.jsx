@@ -1,6 +1,9 @@
 import React from 'react';
 import './Information.css';
 
+import { Link } from 'react-router-dom';
+import Routes from '../../routes/routes';
+
 const Information = () => {
   return (
     <div className="information">
@@ -28,9 +31,13 @@ const Information = () => {
         </div>
 
         <div className="information-buttons">
-          <div className="information-back">Regresar</div>
+          <Link to={Routes.checkout.path}>
+            <div className="information-back">Regresar</div>
+          </Link>
 
-          <div className="information-next">Pagar</div>
+          <Link to={Routes.payment.path}>
+            <div className="information-next">Pagar</div>
+          </Link>
         </div>
       </div>
 
