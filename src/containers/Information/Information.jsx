@@ -34,7 +34,7 @@ const Information = () => {
       phone: formData.get('phone'),
     };
 
-    console.log(buyer);
+    // console.log(buyer);
 
     addToBuyer(buyer);
 

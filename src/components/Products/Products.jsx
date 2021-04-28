@@ -7,10 +7,7 @@ import { AppContext } from '../../context';
 
 const Products = () => {
   // Traemos el estado del AppContext
-  const { state, addToCart } = useContext(AppContext);
-
-  // Traemos los productos del estado
-  const { products } = state;
+  const { products, addToCart } = useContext(AppContext);
 
   const handleAddToCart = (product) => {
     addToCart(product);

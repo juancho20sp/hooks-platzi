@@ -1,5 +1,4 @@
 const path = require('path');
-const Dotenv = require('dotenv-webpack');
 
 // Para el plugin de HTML
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -71,7 +70,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css',
     }),
-    new Dotenv(),
   ],
 
   //   Configuramos el DevServer
